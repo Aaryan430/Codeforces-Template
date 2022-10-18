@@ -20,7 +20,9 @@ struct FenwickTree {
     }
 
     int sum(int l, int r) {
-        return sum(r) - sum(l - 1);
+        int right = sum(r);
+        int left = sum(l-1);                    
+        return right- left;
     }
 
     void add(int idx, int delta) {
